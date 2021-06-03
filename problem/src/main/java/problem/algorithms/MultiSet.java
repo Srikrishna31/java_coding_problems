@@ -1,4 +1,4 @@
-package problem;
+package problem.algorithms;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -23,22 +23,21 @@ class MultiSet<T> {
         list.add(t);
     }
 
-
     void remove(T t) {
         if (container.containsKey(t.hashCode())) {
-            LinkedList<T> list = (LinkedList<T>)container.get(t.hashCode());
+            LinkedList<T> list = (LinkedList<T>) container.get(t.hashCode());
             list.remove();
-            if(list.isEmpty()) {
+            if (list.isEmpty()) {
                 container.remove(t.hashCode());
             }
         }
     }
 
     boolean contains(T t) {
-        //container.getOrDefault(t.hashCode(), false)
+        // container.getOrDefault(t.hashCode(), false)
         if (container.containsKey(t.hashCode())) {
             List<T> list = container.get(t.hashCode());
-            //return list.stream().findFirst().isPresent();
+            // return list.stream().findFirst().isPresent();
             return list.stream().anyMatch(v -> t.equals(v));
         }
 

@@ -5,6 +5,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+
+/**
+ * Implement a multiset
+ * @param <T>
+ */
 class MultiSet<T> {
     private Map<Integer, List<T>> container;
 

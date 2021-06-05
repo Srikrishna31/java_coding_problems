@@ -3,11 +3,11 @@ java_binary(
     srcs = [
         "src/main/java/problem/algorithms/MergeIterator.java",
         "src/main/java/problem/algorithms/MultiSet.java",
-        "src/main/java/problem/algorithms/Problem.java",
+        "src/main/java/problem/algorithms/SortedArrayMerge.java",
     ],
-    main_class = "problem.MultiSet",
-    #    main_class = "problem.Problem",
-    #    main_class = "problem.MergeIterator",
+    #    main_class = "problem.algorithms.MultiSet",
+    #    main_class = "problem.algorithms.SortedArrayMerge",
+    main_class = "problem.algorithms.MergeIterator",
     visibility = ["//:__pkg__"],
     deps = [],
 )
@@ -15,9 +15,11 @@ java_binary(
 java_test(
     name = "problem_test",
     srcs = [
-        "src/test/java/problem/algorithms/ProblemTest.java",
+        "src/test/java/problem/algorithms/SortedArrayMergeTest.java",
+        "src/test/java/problem/algorithms/MultiSetTest.java",
+        "src/test/java/problem/algorithms/MergeIteratorTest.java",
     ],
-    test_class = "problem.algorithms.ProblemTest",
+    test_class = "problem.algorithms.MultiSetTest",
     visibility = ["//:__pkg__"],
     deps = [
         ":problem",

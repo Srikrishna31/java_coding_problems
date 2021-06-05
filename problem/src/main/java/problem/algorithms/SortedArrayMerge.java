@@ -2,18 +2,13 @@ package problem.algorithms;
 
 import java.util.Arrays;
 
-public class Problem {
-    public boolean solve() {
-        return true;
-    }
-
+public class SortedArrayMerge {
     /**
      * @param a sorted array
      * @param b sorted array
      * @return a sorted array that contains all the elements from a and b
      */
-    private static int[] merge(int[] a, int[] b) {
-
+    public static int[] solve(int[] a, int[] b) {
         if (a == null && b == null) {
             return null;
         } else if (a == null) {
@@ -54,6 +49,7 @@ public class Problem {
         }
 
         return c;
+
     }
 
     /**
@@ -70,7 +66,7 @@ public class Problem {
     public static void main(String... args) {
         int[] a = { 1, 10, 25, 31, 33, 50 };
         int[] b = { 2, 4, 32, 64 };
-        int[] c = merge(a, b);
+        int[] c = solve(a, b);
         System.out.println(Arrays.toString(c));
 
         System.out.println(findUnique(new int[] { 1, 2, 3, 2, 3 }));

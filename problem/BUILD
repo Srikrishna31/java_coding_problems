@@ -4,6 +4,7 @@ java_binary(
         "src/main/java/problem/algorithms/MergeIterator.java",
         "src/main/java/problem/algorithms/MultiSet.java",
         "src/main/java/problem/algorithms/SortedArrayMerge.java",
+        "src/main/java/problem/algorithms/ReverseLinkedListGroups.java"
     ],
     #    main_class = "problem.algorithms.MultiSet",
     #    main_class = "problem.algorithms.SortedArrayMerge",
@@ -18,8 +19,9 @@ java_test(
         "src/test/java/problem/algorithms/SortedArrayMergeTest.java",
         "src/test/java/problem/algorithms/MultiSetTest.java",
         "src/test/java/problem/algorithms/MergeIteratorTest.java",
+        "src/test/java/problem/algorithms/ReverseLinkedListGroupsTest.java"
     ],
-    test_class = "problem.algorithms.MultiSetTest",
+    test_class = "problem.algorithms.ReverseLinkedListGroupsTest",
     visibility = ["//:__pkg__"],
     deps = [
         ":problem",

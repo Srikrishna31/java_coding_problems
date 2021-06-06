@@ -21,7 +21,7 @@ public class MultiSetTest {
 
         set.remove("test");
 
-        assertEquals(true, set.contains("test"));
+        assertEquals(false, set.contains("test"));
 
     }
 }

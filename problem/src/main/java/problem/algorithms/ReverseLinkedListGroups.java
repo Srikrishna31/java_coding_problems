@@ -36,14 +36,17 @@ class ReverseLinkedListGroups {
 
     private static NodePair reverseKNodes(LLNode node, int k) {
         if (node.next == null || k == 1) {
-            return new NodePair(node, node.next);
+            LLNode next = node.next;
+            node.next = null;
+            return new NodePair(node, next);
         }
 
         LLNode nextNode = node.next;
-        NodePair res = reverseKNodes(node.next, k - 1);
-        res.reversedHeadNode.next = node;
+        node.next = null;
+        NodePair res = reverseKNodes(nextNode, k - 1);
+        nextNode.next = node;
 
-        return new NodePair(res.reversedHeadNode, nextNode);
+        return res;
     }
 
     static LLNode solve(LLNode node, int k) {
